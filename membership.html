@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Compare PulseForge Fitness memberships, benefits, accountability pods, and FAQs." />
+    <meta name="theme-color" content="#0F1419" />
+    <title>PulseForge Fitness | Membership Plans</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: #0f1419;
+        color: #ffffff;
+        font-family: 'Inter', sans-serif;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button {
+        font: inherit;
+      }
+
+      [data-menu-toggle] .icon-close {
+        display: none;
+      }
+
+      [data-menu-toggle].is-open .icon-open {
+        display: none;
+      }
+
+      [data-menu-toggle].is-open .icon-close {
+        display: block;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: rgba(15, 20, 25, 0.95);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(12px);
+      }
+
+      main > section,
+      footer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      main > section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+
+      main > section > div,
+      footer > div {
+        max-width: 72rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      figure {
+        margin: 0;
+      }
+
+      [data-hero-text] {
+        animation: heroTextIn 0.8s ease-out both;
+      }
+
+      [data-hero-media] {
+        animation: heroMediaIn 0.9s ease-out 0.12s both;
+      }
+
+      @keyframes heroTextIn {
+        from {
+          opacity: 0;
+          transform: translateY(-24px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes heroMediaIn {
+        from {
+          opacity: 0;
+          transform: translateX(-28px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        [data-hero-text],
+        [data-hero-media] {
+          animation: none;
+        }
+
+        main > section:not(:first-of-type) {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+      }
+
+      main > section:not(:first-of-type) {
+        opacity: 0;
+        transform: translateY(32px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+        will-change: opacity, transform;
+      }
+
+      main > section:not(:first-of-type).is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      [data-hero-green-button] [data-hero-arrow] {
+        display: inline-block;
+        max-width: 0;
+        opacity: 0;
+        overflow: hidden;
+        transform: translateX(-0.35rem);
+        transition: max-width 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+        white-space: nowrap;
+      }
+
+      [data-hero-green-button]:hover [data-hero-arrow],
+      [data-hero-green-button]:focus-visible [data-hero-arrow] {
+        max-width: 1rem;
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      [data-arrow-link] span[aria-hidden="true"] {
+        display: inline-block;
+        transition: transform 0.25s ease;
+      }
+
+      [data-arrow-link]:hover span[aria-hidden="true"],
+      [data-arrow-link]:focus-visible span[aria-hidden="true"] {
+        transform: translateX(0.35rem);
+      }
+
+      #mobileMenu.hidden {
+        display: none !important;
+      }
+
+      @media (min-width: 768px) {
+        #mobileMenu {
+          display: flex !important;
+        }
+
+        main > section {
+          padding-top: 5rem;
+          padding-bottom: 5rem;
+        }
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#0F1419] font-['Inter',sans-serif] text-white antialiased">
+    <a
+      href="#home"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-[#00FF41] focus:px-4 focus:py-2 focus:text-[#0F1419]"
+      >Skip to content</a
+    >
+
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-[#0F1419]/95 backdrop-blur">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4" aria-label="Primary">
+        <a href="index.html#home" class="font-['Poppins',sans-serif] text-2xl font-bold tracking-tight text-[#00FF41]">PulseForge</a>
+
+        <button
+          type="button"
+          class="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-white/15 text-white md:hidden"
+          aria-controls="mobileMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation menu"
+          data-menu-toggle
+        >
+          <svg class="icon-open h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg class="icon-close h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 6l12 12M6 18L18 6" />
+          </svg>
+        </button>
+
+        <div class="hidden w-full flex-col gap-6 border-t border-white/10 pt-4 md:flex md:w-auto md:flex-row md:items-center md:justify-end md:gap-8 md:border-0 md:pt-0" id="mobileMenu">
+          <ul class="flex flex-col gap-4 text-sm font-semibold uppercase tracking-wide md:flex-row md:items-center md:gap-8">
+            <li><a href="features.html" class="text-white/80 transition hover:text-white" data-nav-link>Features</a></li>
+            <li><a href="membership.html" class="text-white transition" data-nav-link aria-current="page">Membership</a></li>
+            <li><a href="about.html" class="text-white/80 transition hover:text-white" data-nav-link>About</a></li>
+            <li><a href="contact.html" class="text-white/80 transition hover:text-white" data-nav-link>Contact</a></li>
+          </ul>
+          <div class="flex flex-col gap-3 md:flex-row md:items-center">
+            <a
+              href="https://wa.me/2348072378767"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-lg border border-white/20 px-4 py-2 text-center text-sm font-semibold uppercase tracking-wide text-white/80 transition hover:border-[#25D366] hover:text-[#25D366]"
+              data-nav-link
+            >
+              WhatsApp
+            </a>
+            <a
+              href="membership.html"
+              class="rounded-lg bg-[#00FF41] px-5 py-2 text-center text-sm font-['Poppins',sans-serif] font-semibold uppercase tracking-wide text-[#0F1419] transition hover:bg-[#00dd39]"
+              data-nav-link
+            >
+              Join Now
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="bg-gradient-to-b from-[#0F1419] via-[#111827] to-[#0F1419] px-4 py-16">
+        <div class="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-2">
+          <div data-hero-text class="space-y-5">
+            <p class="text-sm font-semibold uppercase tracking-[0.35em] text-[#FFB703]">Membership Playbooks</p>
+            <h1 class="font-['Poppins',sans-serif] text-4xl font-extrabold leading-tight md:text-5xl">
+              Transparent naira pricing + concierge accountability.
+            </h1>
+            <p class="text-base leading-7 text-white/80 md:text-lg">
+              Every plan begins with a 45-minute assessment, habit audit, and tech-onboarding so your calendar, macros, and pods are synced before day one.
+            </p>
+            <div class="grid gap-3 text-sm text-white/70 sm:grid-cols-2">
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                <p class="font-['Poppins',sans-serif] text-2xl font-bold text-[#00FF41]">95%</p>
+                <p class="mt-1">Members hitting weekly check-ins</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                <p class="font-['Poppins',sans-serif] text-2xl font-bold text-[#FFB703]">72 hrs</p>
+                <p class="mt-1">Average time to custom plan</p>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-3">
+              <a href="https://wa.me/2348072378767" target="_blank" rel="noopener noreferrer" class="rounded-2xl border border-white/25 px-6 py-3 font-semibold text-white/85 transition hover:border-[#00FF41] hover:text-[#00FF41]">Speak with a coach</a>
+              <a href="features.html" data-hero-green-button class="inline-flex items-center justify-center gap-2 rounded-2xl bg-[#00FF41] px-6 py-3 font-['Poppins',sans-serif] font-semibold uppercase tracking-wide text-[#0F1419] transition-all duration-300 ease-out hover:bg-[#00dd39] hover:pr-10">Tour the facility <span data-hero-arrow aria-hidden="true">→</span></a>
+            </div>
+          </div>
+          <figure data-hero-media class="overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
+            <img
+              src="https://images.pexels.com/photos/5327487/pexels-photo-5327487.jpeg?auto=compress&cs=tinysrgb&w=1100"
+              alt="Nigerian man powering through a kettlebell workout at PulseForge"
+              class="h-[380px] w-full object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="bg-[#0F1419] px-4 py-16">
+        <div class="mx-auto max-w-6xl space-y-10">
+          <header class="text-center">
+            <p class="text-sm font-semibold uppercase tracking-[0.35em] text-[#FFB703]">Choose your lane</p>
+            <h2 class="mt-3 font-['Poppins',sans-serif] text-3xl font-bold">Flexible drops, unlimited crews, or elite concierge.</h2>
+            <p class="mx-auto mt-3 max-w-3xl text-white/70">All plans include app access, readiness check-ins, recovery labs, and member events.</p>
+          </header>
+
+          <div class="grid items-stretch gap-6 md:grid-cols-3">
+            <article class="flex flex-col rounded-3xl border border-white/10 bg-[#111827] p-6 shadow-xl">
+              <p class="text-sm uppercase tracking-[0.35em] text-white/55">Drop-In</p>
+              <h3 class="mt-3 font-['Poppins',sans-serif] text-2xl font-semibold">Pay As You Train</h3>
+              <p class="mt-2 font-['Poppins',sans-serif] text-4xl font-bold text-[#FFB703]">₦5,000</p>
+              <p class="text-sm text-white/60">Per session</p>
+              <ul class="mt-6 space-y-3 text-sm text-white/80">
+                <li class="flex gap-2"><span class="text-[#00FF41]" aria-hidden="true">✔</span>Any studio class or open gym slot</li>
+                <li class="flex gap-2"><span class="text-[#00FF41]" aria-hidden="true">✔</span>Coach recap + mobility homework</li>
+                <li class="flex gap-2"><span class="text-[#00FF41]" aria-hidden="true">✔</span>Locker, towel, cryo, and smoothie credit</li>
+              </ul>
+              <a href="https://wa.me/2348072378767" target="_blank" rel="noopener noreferrer" class="mt-8 rounded-xl bg-white/10 px-5 py-3 text-center font-['Poppins',sans-serif] font-semibold transition hover:bg-white/20">Book Session</a>
+            </article>
+
+            <article class="flex flex-col rounded-3xl border border-[#00FF41] bg-[#111827] p-6 shadow-2xl">
+              <p class="text-sm uppercase tracking-[0.35em] text-[#00FF41]">Most Loved</p>
+              <h3 class="mt-3 font-['Poppins',sans-serif] text-2xl font-semibold">Unlimited Crew</h3>
+              <p class="mt-2 font-['Poppins',sans-serif] text-4xl font-bold text-[#FFB703]">₦25,000</p>
+              <p class="text-sm text-white/60">Per month</p>
+              <ul class="mt-6 space-y-3 text-sm text-white/80">
+                <li class="flex gap-2"><span class="text-[#00FF41]" aria-hidden="true">✔</span>Unlimited classes + open gym access</li>
+                <li class="flex gap-2"><span class="text-[#00FF41]" aria-hidden="true">✔</span>2 private coaching sessions monthly</li>
+                <li class="flex gap-2"><span class="text-[#00FF41]" aria-hidden="true">✔</span>Nutrition starter kit + macros tracking</li>
+                <li class="flex gap-2"><span class="text-[#00FF41]" aria-hidden="true">✔</span>WhatsApp accountability pod + events</li>
+              </ul>
+              <a href="https://forms.gle" class="mt-8 rounded-xl bg-[#00FF41] px-5 py-3 text-center font-['Poppins',sans-serif] font-semibold text-[#0F1419] transition hover:bg-[#00dd39]">Start 7-Day Trial</a>
+            </article>
+
+            <article class="flex flex-col rounded-3xl border border-white/10 bg-[#111827] p-6 shadow-xl">
+              <p class="text-sm uppercase tracking-[0.35em] text-white/55">Premium</p>
+              <h3 class="mt-3 font-['Poppins',sans-serif] text-2xl font-semibold">1-on-1 Elite</h3>
+              <p class="mt-2 font-['Poppins',sans-serif] text-4xl font-bold text-[#FFB703]">₦45,000</p>
+              <p class="text-sm text-white/60">Per month</p>
+              <ul class="mt-6 space-y-3 text-sm text-white/80">
+                <li class="flex gap-2"><span class="text-[#00FF41]" aria-hidden="true">✔</span>Weekly private sessions + concierge scheduling</li>
+                <li class="flex gap-2"><span class="text-[#00FF41]" aria-hidden="true">✔</span>Customized nutrition for Nigerian meals</li>
+                <li class="flex gap-2"><span class="text-[#00FF41]" aria-hidden="true">✔</span>Bi-weekly body scan + lifestyle audit</li>
+                <li class="flex gap-2"><span class="text-[#00FF41]" aria-hidden="true">✔</span>Travel kits with bands, sliders, and plans</li>
+              </ul>
+              <a href="https://wa.me/2348072378767" target="_blank" rel="noopener noreferrer" class="mt-8 rounded-xl bg-white/10 px-5 py-3 text-center font-['Poppins',sans-serif] font-semibold transition hover:bg-white/20">Book Consultation</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-[#F8F8F6] px-4 py-16 text-[#0F1419]">
+        <div class="mx-auto max-w-6xl space-y-10">
+          <header class="mx-auto max-w-3xl rounded-3xl border border-[#E5E7EB] bg-white px-6 py-8 text-center shadow-sm">
+            <p class="text-sm font-semibold uppercase tracking-[0.35em] text-[#14919B]">Comparison</p>
+            <h2 class="mt-3 font-['Poppins',sans-serif] text-3xl font-bold">Pick the support level that matches your grind.</h2>
+            <p class="mx-auto mt-3 max-w-2xl text-base leading-7 text-[#4B5563]">
+              A clean side-by-side view of each membership path, styled to match the rest of the site.
+            </p>
+          </header>
+
+          <div class="overflow-hidden rounded-3xl border border-[#E5E7EB] bg-white shadow-lg">
+            <div class="overflow-x-auto">
+              <table class="w-full min-w-[720px] text-left text-sm text-[#111827]">
+                <thead class="bg-[#F3F4F6] text-xs uppercase tracking-wide text-[#6B7280]">
+                  <tr>
+                    <th class="px-4 py-3">Benefit</th>
+                    <th class="px-4 py-3">Drop-In</th>
+                    <th class="px-4 py-3">Unlimited Crew</th>
+                    <th class="px-4 py-3">1-on-1 Elite</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-[#E5E7EB]">
+                  <tr class="bg-white even:bg-[#FAFAFA]">
+                    <td class="px-4 py-3 font-semibold">Classes & Open Gym</td>
+                    <td class="px-4 py-3">Per session</td>
+                    <td class="px-4 py-3">Unlimited</td>
+                    <td class="px-4 py-3">Unlimited + private slots</td>
+                  </tr>
+                  <tr class="bg-white even:bg-[#FAFAFA]">
+                    <td class="px-4 py-3 font-semibold">Coaching Touchpoints</td>
+                    <td class="px-4 py-3">Recap message</td>
+                    <td class="px-4 py-3">Weekly pod call</td>
+                    <td class="px-4 py-3">Dedicated coach + concierge</td>
+                  </tr>
+                  <tr class="bg-white even:bg-[#FAFAFA]">
+                    <td class="px-4 py-3 font-semibold">Body Scans</td>
+                    <td class="px-4 py-3">Add-on</td>
+                    <td class="px-4 py-3">Quarterly</td>
+                    <td class="px-4 py-3">Monthly</td>
+                  </tr>
+                  <tr class="bg-white even:bg-[#FAFAFA]">
+                    <td class="px-4 py-3 font-semibold">Travel Programming</td>
+                    <td class="px-4 py-3">Template PDF</td>
+                    <td class="px-4 py-3">Customized within 48h</td>
+                    <td class="px-4 py-3">Same-day concierge</td>
+                  </tr>
+                  <tr class="bg-white even:bg-[#FAFAFA]">
+                    <td class="px-4 py-3 font-semibold">Events & Community</td>
+                    <td class="px-4 py-3">Access with ticket</td>
+                    <td class="px-4 py-3">Included</td>
+                    <td class="px-4 py-3">VIP table + guests</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-[#111827] px-4 py-16">
+        <div class="mx-auto max-w-6xl space-y-10">
+          <header class="text-center space-y-3">
+            <p class="text-sm font-semibold uppercase tracking-[0.35em] text-[#00FF41]">Accountability perks</p>
+            <h2 class="font-['Poppins',sans-serif] text-3xl font-bold">Beyond equipment: lifestyle upgrades.</h2>
+          </header>
+          <div class="grid gap-6 md:grid-cols-3">
+            <article class="rounded-3xl border border-white/10 bg-[#0F1419] p-6">
+              <p class="text-sm uppercase tracking-[0.35em] text-white/60">Concierge</p>
+              <h3 class="mt-2 font-['Poppins',sans-serif] text-2xl font-semibold">Calendar sync & rides</h3>
+              <p class="mt-3 text-white/70">We coordinate Bolt rides, send iCal holds, and shift sessions if traffic hits.</p>
+            </article>
+            <article class="rounded-3xl border border-white/10 bg-[#0F1419] p-6">
+              <p class="text-sm uppercase tracking-[0.35em] text-white/60">Nutrition</p>
+              <h3 class="mt-2 font-['Poppins',sans-serif] text-2xl font-semibold">Naija plates, macro-aligned</h3>
+              <p class="mt-3 text-white/70">We remix your favorite buka meals with portion guides and grocery lists.</p>
+            </article>
+            <article class="rounded-3xl border border-white/10 bg-[#0F1419] p-6">
+              <p class="text-sm uppercase tracking-[0.35em] text-white/60">Community</p>
+              <h3 class="mt-2 font-['Poppins',sans-serif] text-2xl font-semibold">Pods & socials</h3>
+              <p class="mt-3 text-white/70">Monthly rooftop hangs, accountability dinners, and Slack-style chat pods.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white px-4 py-16 text-[#0F1419]">
+        <div class="mx-auto max-w-6xl space-y-10">
+          <header class="mx-auto max-w-3xl rounded-3xl border border-[#E5E7EB] bg-[#F8F8F6] px-6 py-8 text-center shadow-sm">
+            <p class="text-sm font-semibold uppercase tracking-[0.35em] text-[#E76F51]">FAQs</p>
+            <h2 class="mt-3 font-['Poppins',sans-serif] text-3xl font-bold">Get clarity before you join.</h2>
+            <p class="mx-auto mt-3 max-w-2xl text-base leading-7 text-[#4B5563]">
+              Quick answers to the most common membership questions, arranged to fit the rest of the site’s clean layout.
+            </p>
+          </header>
+
+          <div class="grid gap-4 md:grid-cols-2">
+            <details class="rounded-2xl border border-[#E5E7EB] bg-[#F8F8F6] px-6 py-5 shadow-sm transition hover:shadow-md">
+              <summary class="cursor-pointer text-lg font-semibold text-[#111827]">How soon can I start after payment?</summary>
+              <p class="mt-3 leading-7 text-[#4B5563]">Within 72 hours. You receive onboarding forms, InBody scan booking, and coach match options immediately.</p>
+            </details>
+            <details class="rounded-2xl border border-[#E5E7EB] bg-[#F8F8F6] px-6 py-5 shadow-sm transition hover:shadow-md">
+              <summary class="cursor-pointer text-lg font-semibold text-[#111827]">Do you freeze memberships?</summary>
+              <p class="mt-3 leading-7 text-[#4B5563]">Yes. Unlimited and Elite members can pause for up to 30 days per quarter with 48h notice.</p>
+            </details>
+            <details class="rounded-2xl border border-[#E5E7EB] bg-[#F8F8F6] px-6 py-5 shadow-sm transition hover:shadow-md">
+              <summary class="cursor-pointer text-lg font-semibold text-[#111827]">Can I mix in virtual sessions?</summary>
+              <p class="mt-3 leading-7 text-[#4B5563]">All plans include digital programming. Elite members also get live virtual coaching while traveling.</p>
+            </details>
+            <details class="rounded-2xl border border-[#E5E7EB] bg-[#F8F8F6] px-6 py-5 shadow-sm transition hover:shadow-md">
+              <summary class="cursor-pointer text-lg font-semibold text-[#111827]">What payment options exist?</summary>
+              <p class="mt-3 leading-7 text-[#4B5563]">Bank transfers, cards, and corporate wellness reimbursements. Elite can pay quarterly.</p>
+            </details>
+          </div>
+
+          <div class="text-center">
+            <a href="https://wa.me/2348072378767" target="_blank" rel="noopener noreferrer" data-arrow-link class="inline-flex items-center gap-2 rounded-2xl bg-[#0F1419] px-6 py-3 font-semibold text-white transition hover:bg-[#111827]">
+              Talk to membership concierge
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="bg-[#0B0F14] px-4 py-12 text-sm text-white/80">
+      <div class="mx-auto grid max-w-6xl gap-8 md:grid-cols-5">
+        <div>
+          <p class="font-['Poppins',sans-serif] text-xl font-semibold text-[#00FF41]">PulseForge NG</p>
+          <p class="mt-3 leading-7 text-white/60">Premium gym hubs in Lagos, Abuja, and hybrid coaching for West African professionals.</p>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-[0.35em] text-white/50">Studios</p>
+          <ul class="mt-3 space-y-2 leading-7">
+            <li>Ikoyi · 14 Glover Road</li>
+            <li>Victoria Island · Akin Adesola</li>
+            <li>Abuja · Wuse II</li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-[0.35em] text-white/50">Connect</p>
+          <address class="mt-3 space-y-2 not-italic leading-7">
+            <p>WhatsApp: +234 807 237 8767</p>
+            <p>Email: hello@pulseforge.ng</p>
+            <p>Instagram: @PulseForgeFit</p>
+          </address>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-[0.35em] text-white/50">Quick links</p>
+          <div class="mt-3 flex items-center gap-3">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="rounded-full border border-white/10 bg-white/5 p-3 text-white/70 transition hover:border-[#1877F2] hover:text-[#1877F2]">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.1h-3.1V8.9c0-.9.3-1.5 1.6-1.5H16.7V4.6c-.3 0-1.4-.1-2.7-.1-2.7 0-4.6 1.6-4.6 4.6v1.8H6.5V14H9.4v8h4.1z"/></svg>
+            </a>
+            <a href="https://instagram.com/PulseForgeFit" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="rounded-full border border-white/10 bg-white/5 p-3 text-white/70 transition hover:border-[#E1306C] hover:text-[#E1306C]">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1.2" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X" class="rounded-full border border-white/10 bg-white/5 p-3 text-white/70 transition hover:border-white hover:text-white">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23 22h-6.8l-5.3-6.7L4.9 22H2l7.3-8.4L1 2h7l4.9 6.1L18.9 2zm-1.2 18h1.7L7.1 3.9H5.2L17.7 20z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-[0.35em] text-white/50">Hours</p>
+          <ul class="mt-3 space-y-2 leading-7">
+            <li>Mon–Fri · 5am – 11pm</li>
+            <li>Sat · 6am – 9pm</li>
+            <li>Sun · 7am – 7pm</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mx-auto mt-10 flex max-w-6xl flex-col gap-3 border-t border-white/10 pt-6 text-xs text-white/50 md:flex-row md:items-center md:justify-between">
+        <p>© <span id="year"></span> PulseForge Fitness. All rights reserved.</p>
+        <p>Built with unstoppable energy in Nigeria.</p>
+      </div>
+    </footer>
+
+    <button
+      type="button"
+      class="fixed bottom-5 right-4 z-40 hidden h-12 w-12 items-center justify-center rounded-2xl border border-white/20 bg-[#00FF41] text-[#0F1419] shadow-xl transition hover:bg-[#00dd39] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00FF41] md:hidden"
+      aria-label="Back to top"
+      data-back-to-top
+    >
+      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 19V5m0 0l-6 6m6-6l6 6" />
+      </svg>
+    </button>
+
+    <script>
+      const menuToggle = document.querySelector('[data-menu-toggle]');
+      const menuPanel = document.getElementById('mobileMenu');
+      const navLinks = document.querySelectorAll('[data-nav-link]');
+      const yearEl = document.getElementById('year');
+      const desktopQuery = window.matchMedia('(min-width: 768px)');
+      const backToTopBtn = document.querySelector('[data-back-to-top]');
+
+      const setMenuState = (open) => {
+        if (!menuToggle || !menuPanel) return;
+        menuToggle.setAttribute('aria-expanded', String(open));
+        menuPanel.classList.toggle('hidden', !open);
+        menuToggle.classList.toggle('is-open', open);
+      };
+
+      if (menuToggle && menuPanel) {
+        menuToggle.addEventListener('click', () => {
+          const open = menuPanel.classList.contains('hidden');
+          setMenuState(open);
+        });
+      }
+
+      navLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+          if (!desktopQuery.matches) {
+            setMenuState(false);
+          }
+        });
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          setMenuState(false);
+        }
+      });
+
+      const syncMenu = () => {
+        if (!menuPanel) return;
+        if (desktopQuery.matches) {
+          menuPanel.classList.remove('hidden');
+          menuToggle?.setAttribute('aria-expanded', 'true');
+          menuToggle?.classList.add('is-open');
+        } else {
+          menuPanel.classList.add('hidden');
+          menuToggle?.setAttribute('aria-expanded', 'false');
+          menuToggle?.classList.remove('is-open');
+        }
+      };
+
+      syncMenu();
+      if (typeof desktopQuery.addEventListener === 'function') {
+        desktopQuery.addEventListener('change', syncMenu);
+      } else if (typeof desktopQuery.addListener === 'function') {
+        desktopQuery.addListener(syncMenu);
+      }
+
+      const updateBackToTop = () => {
+        if (!backToTopBtn) return;
+        const isMobileViewport = window.innerWidth < 768;
+        const shouldShow = isMobileViewport && window.scrollY > 120;
+        backToTopBtn.classList.toggle('hidden', !shouldShow);
+        backToTopBtn.classList.toggle('flex', shouldShow);
+      };
+
+      backToTopBtn?.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      window.addEventListener('scroll', updateBackToTop, { passive: true });
+      window.addEventListener('resize', updateBackToTop);
+      updateBackToTop();
+
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+
+      const revealSections = document.querySelectorAll('main > section:not(:first-of-type)');
+
+      if ('IntersectionObserver' in window) {
+        const sectionObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.18, rootMargin: '0px 0px -8% 0px' }
+        );
+
+        revealSections.forEach((section) => sectionObserver.observe(section));
+      } else {
+        revealSections.forEach((section) => section.classList.add('is-visible'));
+      }
+    </script>
+  </body>
+</html>
