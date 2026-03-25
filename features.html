@@ -16,6 +16,12 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
     <link rel="stylesheet" href="css/styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
@@ -28,7 +34,17 @@
 
     <header class="sticky top-0 z-50 border-b border-white/10 bg-[#0F1419]/95 backdrop-blur">
       <nav class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4" aria-label="Primary">
-        <a href="index.html#home" class="font-['Poppins',sans-serif] text-2xl font-bold tracking-tight text-[#00FF41]">PulseForge</a>
+        <a href="index.html#home" class="flex items-center gap-3 font-['Poppins',sans-serif] text-2xl font-bold tracking-tight text-[#00FF41]">
+          <img
+            src="assets/images/android-chrome-192x192.png"
+            alt="PulseForge logo"
+            class="h-10 w-10 rounded-2xl border border-white/15 bg-white/5 p-1"
+            width="40"
+            height="40"
+            decoding="async"
+          />
+          <span>PulseForge</span>
+        </a>
 
         <button
           type="button"
